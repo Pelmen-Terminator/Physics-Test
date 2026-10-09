@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Тест по физике</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:wght@500;600&family=Onest:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Тест по физике</h1>
+<p class="subtitle">От механики до атомного ядра · 200 вопросов за прохождение · база из 500</p>
+</header>
+<div id="start-screen" class="screen active"><div class="start-content">
+<h2>Проверьте знания по физике</h2>
+<p>В тесте <strong>200 обязательных вопросов</strong>, выбранных случайно из базы в <strong>500 вопросов</strong>. Пропустить вопрос нельзя.</p>
+<ul class="info-list"><li>4 варианта ответа, можно нажимать клавиши 1–4</li><li>Случайный порядок, без повторов</li><li>Оценка по 5-балльной системе</li></ul>
+<button id="start-btn" class="btn primary">Начать тест</button>
+</div></div>
+<div id="quiz-screen" class="screen">
+<div id="ruler" class="ruler" aria-hidden="true"></div>
+<div class="quiz-header"><span id="question-counter">Вопрос 1 из 200</span><span id="score-live">Верно: 0</span></div>
+<h2 id="question-text"></h2>
+<div id="answers-container" class="answers"></div>
+<button id="next-btn" class="btn primary" disabled>Дальше</button>
+</div>
+<div id="result-screen" class="screen"><div class="result-content">
+<div id="grade-circle" class="grade-circle"><span id="grade-number">5</span></div>
+<h2 id="result-title"></h2><p id="result-text"></p>
+<div class="stats">
+<div class="stat"><span class="stat-value" id="correct-count">0</span><span class="stat-label">Верно</span></div>
+<div class="stat"><span class="stat-value" id="wrong-count">0</span><span class="stat-label">Ошибок</span></div>
+<div class="stat"><span class="stat-value" id="percent">0%</span><span class="stat-label">Результат</span></div>
+</div>
+<div id="comment" class="comment"></div>
+<button id="restart-btn" class="btn primary">Пройти снова</button>
+</div></div>
+</div>
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
